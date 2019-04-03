@@ -9,7 +9,7 @@
 MethodInject是完全基于APT+Gradle开发的框架，它在编译期自动向您的java文件对应的class注入字节码，您无需关注性能问题；
 MethodInject的使用方式及其简单，你只需在你需要处理拦截的方法上加上注解就可以实现自动拦截；
 MethodInject开启了使用java代码动态编程的新纪元，比如，一些老旧的运行时注解方案可基于MethodInject改造成性能更好的框架。
-【啰嗦一句，有网友问我：为什么只用Gradle插件就可以实现，为什么还要用APT？原因是在Gradle插件中遍历所有目录的class，同时还要遍历class中的Method，性能开销太大，如果使用APT提前生成要处理的class表，那么在Gradle插件工作的时候就没那么费劲了。】
+#### 【啰嗦一句，有网友问我：为什么只用Gradle插件就可以实现，为什么还要用APT？原因是在Gradle插件中遍历所有目录的class，同时还要遍历class中的Method，性能开销太大，如果使用APT提前生成要处理的class表，那么在Gradle插件工作的时候就没那么费劲了。】
 ## 使用方式
 ### 外部类
 ```Java
