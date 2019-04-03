@@ -71,18 +71,20 @@ public class TestInject implements InjectProcessor {
 
 ### 集成方式
 
-#### Gradle插件
+#### 在project的build.gradle中使用Gradle插件
 ```Xml
- 审核中
+dependencies {
+        classpath 'com.fanjun:injectplugin:1.0.0'
+    }
 ```
-#### APT处理器插件
+#### 在Moudle的build.gradle中使用API及APT处理器插件
 ```Xml
- 审核中
+dependencies {
+    implementation 'com.fanjun:methodinject:1.0.0'
+    annotationProcessor 'com.fanjun:methodinjectcompiler:1.0.0'
+}
 ```
-#### API
-```Xml
- 审核中
-```
+
 #### 联系我
 ```Xml
 我的博客：https://blog.csdn.net/qwe112113215
