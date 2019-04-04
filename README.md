@@ -12,7 +12,7 @@ MethodInject开启了使用java代码动态编程的新纪元，比如，一些�
 ##### 【啰嗦一句，有网友问我：为什么只用Gradle插件就可以实现，为什么还要用APT？原因是在Gradle插件中遍历所有目录的class，同时还要遍历class中的Method，性能开销太大，如果使用APT提前生成要处理的class表，那么在Gradle插件工作的时候就没那么费劲了。】
 
 ## 已知问题
-##### 1.方法参数中若存在当前Moudle外引用的其他Moudle/jar/arr包中的类型，将导致Inject失败，我尽快修复
+##### 1.方法参数中仅支持当前Module中（不含引用的其他Module、jar、aar）、Android.jar中、jre中的class类型，如果超出该范畴会导致inject失败
 
 ## 使用方式
 ### 外部类
@@ -79,7 +79,7 @@ public class TestInject implements InjectProcessor {
 #### 在project的build.gradle中使用Gradle插件
 ```Xml
 dependencies {
-        classpath 'com.fanjun:injectplugin:1.0.1'
+        classpath 'com.fanjun:injectplugin:1.0.2'
     }
 ```
 #### 在Moudle的build.gradle中使用API及APT处理器插件
@@ -88,6 +88,10 @@ dependencies {
     implementation 'com.fanjun:methodinject:1.0.0'
     annotationProcessor 'com.fanjun:methodinjectcompiler:1.0.0'
 }
+```
+#### 在Moudle的build.gradle中引用插件
+```Xml
+    apply plugin: 'com.fanjun.inject'
 ```
 
 #### 联系我
