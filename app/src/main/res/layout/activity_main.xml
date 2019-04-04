@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/btn1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="click Me! 我不会被拦截"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="#ff0000" />
+    <TextView
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="click Me! 外部类方法被拦截了"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="#ff0000"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/btn3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="click Me! 匿名内部类方法被拦截了"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:background="#ff0000"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>
